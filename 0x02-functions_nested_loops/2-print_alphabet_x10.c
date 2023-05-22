@@ -7,7 +7,7 @@
  */
 void print_alphabet_x10(void)
 {
-	char letter;
+	chat letter;
 	int i;
 
 	for (i = 0; i < 10; i++)
@@ -16,7 +16,6 @@ void print_alphabet_x10(void)
 		{
 			_putchar(letter);
 		}
-
 		_putchar('\n');
 	}
 }
