@@ -1,33 +1,22 @@
 #include "main.h"
-#include <stdio.h>
-#include <limits.h>
 
 /**
- * main - check the code.
+ * print_last_digit - Prints the last digit of a number.
+ * @n: The number to extract the last digit from.
  *
- * Return: Always 0 (Success)
+ * Return: The value of the last digit.
  */
-int main(void)
+
+int print_last_digit(int n)
 {
-	int n;
+	int last_digit;
 
-	n = 98;
-	printf("Last digit of %d is %d\n", n, print_last_digit(n));
+	if (n < 0)
+		n = -n;
 
-	n = 0;
-	printf("Last digit of %d is %d\n", n, print_last_digit(n));
+	last_digit = n % 10;
 
-	n = -1024;
-	printf("Last digit of %d is %d\n", n, print_last_digit(n));
+	_putchar(last_digit + '0');
 
-	n = INT_MAX;
-	printf("Last digit of %d is %d\n", n, print_last_digit(n));
-
-	n = INT_MIN;
-	printf("Last digit of %d is %d\n", n, print_last_digit(n));
-
-	n = 1;
-	printf("Last digit of %d is %d\n", n, print_last_digit(n));
-
-	return (0);
+	return (last_digit);
 }
